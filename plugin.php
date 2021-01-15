@@ -28,9 +28,7 @@ function og_scraper( $args ) {
         $web->go($url);
 
         $data = $web->openGraph;
-        print_r($meta);
         $description = $web->openGraph['og:description'];
-        print $description;
         if(empty($description)) $description = $meta['description'];
         $image = $web->openGraph['og:image'];
         if(substr($image, 0, 4) != "http" || substr($web->openGraph['og:image'], 0, 5) != "https") $image = $parsed_url['scheme'] . "://" . $parsed_url['host'] . $web->openGraph['og:image'];
