@@ -1,4 +1,4 @@
-# OG-Scraper
+# Open Graph Meta Scraper
 
 ## Requirements
 
