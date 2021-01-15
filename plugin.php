@@ -35,22 +35,19 @@ function og_scraper( $args ) {
         $image = $web->openGraph['og:image'];
         if(substr($image, 0, 4) != "http" || substr($web->openGraph['og:image'], 0, 5) != "https") $image = $parsed_url['scheme'] . "://" . $parsed_url['host'] . $web->openGraph['og:image'];
 		?>
-			<html>
+		<html>
 			<head>
-                <?php
-                echo '<meta property="og:title" content="' . $title . '" />
-                <meta property="og:type" content="' . $web->openGraph['og:type'] . '" />
-                <meta property="og:url" content="' . $web->openGraph['og:location'] . '" />
-                <meta property="og:image" content="' .  $image . '" />
-                <meta property="og:site_name" content="' . $web->openGraph['og:site_name'] . '" />
-                <meta property="og:description" content="' . $description . '" />';
-
-
-                    ?>
-			<meta http-equiv="refresh" content="<?php echo DELAY; ?>; url=<?php echo $url; ?>">
-            </head>
-
-			</html>
+				<?php
+					echo '<meta property="og:title" content="' . $title . '" />
+					<meta property="og:type" content="' . $web->openGraph['og:type'] . '" />
+					<meta property="og:url" content="' . $web->openGraph['og:location'] . '" />
+					<meta property="og:image" content="' .  $image . '" />
+					<meta property="og:site_name" content="' . $web->openGraph['og:site_name'] . '" />
+					<meta property="og:description" content="' . $description . '" />';
+				?>
+					<meta http-equiv="refresh" content="<?php echo DELAY; ?>; url=<?php echo $url; ?>">
+			</head>
+		</html>
 		<?php
 		die();
 	
