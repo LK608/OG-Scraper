@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Open Graph Meta Scraper
-Plugin URI: https://gist.github.com/baconbrad/6f6ea5bafbae869d3a2ce586dd2e482a
+Plugin URI: https://github.com/LK608/OG-Scraper
 Description: Get Open Graph information for your shortened links
 Version: 1.1
 Author: Luke Steinfurth
