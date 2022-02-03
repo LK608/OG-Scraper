@@ -34,7 +34,7 @@ function og_scraper( $args ) {
             $description = $meta['description'];
         }
 
-        $description = $web->openGraph['og:title'];
+        $title = $web->openGraph['og:title'];
         if(empty($title)) 
         {
             $page = file_get_contents($url);
