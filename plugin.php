@@ -22,7 +22,7 @@ function og_scraper( $args ) {
 
         
             
-        $web = new \spekulatius\phpscraper();
+        $web = new \Spekulatius\PHPScraper\PHPScraper;
 
         $web->go($url);
 
